@@ -12,7 +12,7 @@ export default function Graph() {
   const { data, isFetching , isSuccess, isError } = api.useGetLabelsQuery()
   let graphData;
 
-  
+console.log(data)  
 
   if(isFetching){
     graphData = <div>Fetching</div>;
@@ -21,7 +21,6 @@ export default function Graph() {
   }else if(isError){
     graphData = <div>Error</div>
   }
-
 
   return (
     <div className="flex justify-content max-w-xs mx-auto">

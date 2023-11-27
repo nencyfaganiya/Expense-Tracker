@@ -7,8 +7,6 @@ export default function Labels() {
    const { data, isFetching , isSuccess, isError } = api.useGetLabelsQuery()
     let Transactions;
 
-    
-
     if(isFetching){
         Transactions = <div>Fetching</div>;
     }else if(isSuccess){

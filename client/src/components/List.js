@@ -3,12 +3,14 @@ import 'boxicons';
 import {default as api} from '../store/apiSlice';
 
 export default function List() {
+   
     const { data, isFetching , isSuccess, isError } = api.useGetLabelsQuery()
     const [deleteTransaction] = api.useDeleteTransactionMutation()
     let Transactions;
 
     
     const handlerClick = (e) => {
+        e.preventDefault();
         if(!e.target.dataset.id) return 0;
         deleteTransaction({ _id : e.target.dataset.id })
     }
