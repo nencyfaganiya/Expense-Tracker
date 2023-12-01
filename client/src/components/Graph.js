@@ -12,8 +12,6 @@ export default function Graph() {
   const { data, isFetching , isSuccess, isError } = api.useGetLabelsQuery()
   let graphData;
 
-console.log(data)  
-
   if(isFetching){
     graphData = <div>Fetching</div>;
   }else if(isSuccess){

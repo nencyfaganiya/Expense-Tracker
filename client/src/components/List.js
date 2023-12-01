@@ -5,10 +5,11 @@ import {default as api} from '../store/apiSlice';
 export default function List() {
    
     const { data, isFetching , isSuccess, isError } = api.useGetLabelsQuery()
+    // const { data, isFetching , isSuccess, isError } = api.useGetTransactionQuery();
     const [deleteTransaction] = api.useDeleteTransactionMutation()
     let Transactions;
 
-    
+    console.log(data);
     const handlerClick = (e) => {
         e.preventDefault();
         if(!e.target.dataset.id) return 0;

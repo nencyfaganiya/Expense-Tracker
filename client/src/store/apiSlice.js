@@ -39,6 +39,24 @@ export const apiSlice = createApi({
                 body : recordId
             }),
             invalidatesTags: ['transaction']
+        }),
+
+        // delete record
+        getTransaction : builder.query({
+            query : recordId => ({
+                // get: 'http://localhost:8080/api/transaction'
+                url : '/api/transaction',
+                method : "GET",
+                body : recordId
+           }),
+            invalidatesTags: ['transaction']
+        }),
+
+        // get transaction
+        getTransaction : builder.query({
+            // get: 'http://localhost:8080/api/transaction'
+            query: () => '/api/transaction',
+            providesTags: ['transaction']
         })
 
     })
