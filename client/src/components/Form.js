@@ -26,7 +26,7 @@ export default function Form() {
                     <input type="text" {...register('name')} placeholder='Sallary, House Rend, SIP' className='form-input' />
                 </div>
                 <select className='form-input' {...register('type')}>
-                    <option value="Investment" defaultValue>Investment</option>
+                    <option value="Income" defaultValue>Income</option>
                     <option value="Expense">Expense</option>
                     <option value="Savings">Savings</option>
                 </select>

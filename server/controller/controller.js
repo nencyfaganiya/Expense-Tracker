@@ -72,7 +72,7 @@ async function get_Labels(req, res){
             $unwind: "$categories_info"
         }
     ]).then(result => {
-        let data = result.map(v => Object.assign({}, { _id: v._id, name: v.name, type: v.type, amount: v.amount, date: v.date, color: v.categories_info['color']}));
+        let data = result.map(v => Object.assign({}, { _id: v._id, name: v.name, type: v.type, amount: v.amount, color: v.categories_info['color']}));
         console.log(data);
         res.json(data);
     }).catch(error => {
